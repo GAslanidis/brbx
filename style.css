@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: auto;
+  font-family: "Instrument Sans", sans-serif;
+  background-color: #fbe100;
+  color: #111;
+  line-height: 1.2;
+  /* border: 1px solid blue; */
+}
+
+.container {
+  width: 90%;
+  /* padding: 40px; */
+  max-width: 100%;
+  margin: auto;
+  /* border: 1px solid green; */
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid palevioletred; */
+}
+
+.logo{
+  width: 20%;
+}
+
+.logo img{
+  width: 182.3px; /*60%*/
+  display: block;
+}
+
+.top-nav nav a {
+  margin-left: 30px;
+  /* font-size: 1.5em;  */
+  /* 24px */
+  font-size: clamp(1rem, 2vw, 1.5rem); /* 16px to 24px */
+  font-weight:100;
+  text-decoration: none;
+  color: #111;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.left {
+  /* flex: 1 1 600px; */
+  flex: 1 1 60%;
+  min-width: 0;
+  /* border: 1px solid black; */
+}
+
+.left h2 {
+  /* font-size: 2.8125em;  */
+  /* 45px */
+  width: 100%;
+  font-size: clamp(1.5rem, 5vw, 2.8125rem); /* 24px to 45px */
+  font-weight: 600;
+}
+
+.description {
+  /* font-size: 1.75em;  */
+  /* 28px */
+  width: 100%;
+  padding-top: 70px;
+  font-size: clamp(1rem, 3vw, 1.75rem); /* 16px to 28px */
+  font-weight: 400;
+}
+
+.services{
+  width: 100%;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10%;
+}
+
+.services span {
+  /* font-size: 2.0625em;  */
+  /* 33px */
+  max-width: 40%;
+  font-size: clamp(1.25rem, 4vw, 2.0625rem); /* 20px to 33px */
+  font-weight: 600;
+}
+
+.services #digital{
+  width: 267.8px;
+}
+
+.right, .top-content {
+  /* flex: 1 1 142px; */
+  flex: 1 1 40%;
+  min-width: 0;
+  text-align: left;
+  padding-left: 5%;
+  /* border: 1px solid red; */
+  /* padding-left: 68px; */
+  /*Amimation*/
+  /* animation: slideIn 1s ease-in;
+  background-color: #010cdc;
+  border-color: #010cdc;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 50%;
+  border-bottom-left-radius: 50%; */
+}
+
+.right img, .top-content img{
+  display: block;
+  width: 100%;
+  /* border: 1px solid blue; */
+}
+
+.top-content{
+  padding-left: 0;
+}
+
+.top-content img{
+  justify-self: center;
+}
+
+.right.hidden{
+  display: none;
+}
+
+.top-content.hidden{
+  display: none;
+}
+
+/* @keyframes slideIn {
+  from {
+    transform: translateX(100%) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(100%);
+    opacity: 1;
+  }
+} */
+
+/* .right h2 {
+  color: #010cdc;
+  font-size: 3.75em; 60px 
+  font-weight: 800;
+}
+
+.notify {
+  color: #010cdc;
+  font-size: 1.875em; 30px 
+  padding-top: 50px;
+  font-weight: 480;
+}
+
+.email-form {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #111;
+  padding-top: 50px;
+  padding-bottom: 5px;
+}
+
+.email-form input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 1.5em; 24px
+  font-weight: 400;
+  outline: none;
+}
+
+.email-form input::placeholder {
+  color: black;
+}
+
+.email-form button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.5em; 24px
+  font-weight: 400;
+  cursor: pointer;
+} */
+
+footer {
+  width: 100%;
+  padding-top: 125px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.location, .email {
+  width: 50%;
+  /* font-size: 1.625em;  */
+  /* 26px */
+  font-size: clamp(1rem, 3.5vw, 1.625rem); /* 16px to 26px */
+}
+
+.location{
+  font-weight: 400;
+}
+
+.email {
+  font-weight: 600;
+}
+
+@media (max-width: 1340px) {
+  .services span{
+    max-width: 20%;
+  }
+}
+
+@media (max-width: 1120px) {
+  .content{
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .top-content img{
+    width: 80%;
+  }
+
+  .description{
+    padding-top: 50px;
+  }
+
+  .services{
+    padding-top: 50px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .services span{
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 540px){
+  .top-nav nav{
+    display: flex;
+    flex-direction: column;
+  }
+}
