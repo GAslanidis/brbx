@@ -52,10 +52,11 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 80px;
+  /* border: 1px solid red; */
 }
 
 .left {
+  align-self: center;
   flex: 1 1 60%;
   min-width: 0;
   /* border: 1px solid black; */
@@ -76,6 +77,7 @@ body {
   padding-top: 70px;
   font-size: clamp(1rem, 3vw, 1.75rem); /* 16px to 28px */
   font-weight: 400;
+  /* border: 1px solid grey; */
 }
 
 .services{
@@ -110,8 +112,11 @@ body {
 }
 
 .right img, .top-content img{
+  align-self: flex-start;
+  /**/
   display: block;
   width: 100%;
+  object-fit: contain;
   /* border: 1px solid blue; */
 }
 
