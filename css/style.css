@@ -200,6 +200,8 @@ footer {
 
 .location{
   font-weight: 400;
+  text-decoration: none;
+  color: #111;
 }
 
 .email {
